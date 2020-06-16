@@ -39,4 +39,13 @@ $(function(){
             $(this).trigger('submit');
         };
     });
+    //----------------------------------------------------------------------
+    //去注册按钮点击事件
+    $('.register').on('click',function(){
+        $('.layui-form').eq(0).hide().siblings('form').show();
+    });
+    //去登录
+    $('.login').on('click',function(){
+        $('.layui-form').eq(1).hide().siblings('form').show();
+    });
 });

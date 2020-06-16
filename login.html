@@ -24,7 +24,7 @@
         <div class="title">
             <img src="./assets/images/login_title.png" alt="">
         </div>
-        <!-- 表单区域 -->
+        <!-- 登录表单区域 -->
         <form class="layui-form" action="">
             <!-- 用户名 -->
             <div class="layui-form-item">
@@ -44,6 +44,34 @@
             <div class="links">
                 <a href="javascript:void(0);" class="register">
                     去注册账号
+                </a>
+            </div>
+        </form>
+        <!-- 注册表单区域 -->
+        <form class="layui-form" action="" style="display: none;">
+            <!-- 用户名 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1e9fff;"></i>  
+                <input type="text" name="username" lay-verify="required|uname" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            </div>
+            <!-- 密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1e9fff;"></i>  
+                <input type="password" name="password" lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+            <!-- 确认密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1e9fff;"></i>  
+                <input type="password" name="password" lay-verify="required|pwd" placeholder="请确认密码" autocomplete="off" class="layui-input">
+            </div>
+            <!-- 注册按钮 -->
+            <div class="layui-form-item">
+                <button type="submit" lay-submit class="layui-btn layui-btn-normal layui-btn-fluid">注册</button>
+            </div>
+            <!-- 注册 -->
+            <div class="links">
+                <a href="javascript:void(0);" class="login">
+                    去登录
                 </a>
             </div>
         </form>
