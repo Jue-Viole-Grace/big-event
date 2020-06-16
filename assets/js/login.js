@@ -1,11 +1,15 @@
 //实现登录功能
 $(function(){
+    //获取表单对象
+    var form = layui.form;
     //表单提交事件(点击登录button)
     $('.layui-form').submit(function(e){
         //阻止默认事件
         e.preventDefault();
         //获取用户名和密码
         var formData = $(this).serialize();
+        //借助layui提供的方法进行表单验证
+        form.verify();
         //发送ajax请求验证用户名和密码
         $.ajax({
             url: 'http://ajax.frontend.itheima.net/api/login',
