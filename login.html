@@ -8,10 +8,47 @@
     <title>大事件-登录页</title>
     <!-- 导入layUI的css文件 -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- login页面自己的css -->
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
 <body>
-    
+    <!-- 头部logo -->
+    <div class="layui-main header">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+    <!-- 中间区域 -->
+    <div class="center-box">
+        <!-- 标题 -->
+        <div class="title">
+            <img src="./assets/images/login_title.png" alt="">
+        </div>
+        <!-- 表单区域 -->
+        <form class="layui-form" action="">
+            <!-- 用户名 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1E9FFF;"></i>  
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
+                    class="layui-input">
+            </div>
+            <!-- 密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1E9FFF;"></i>  
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 登录按钮 -->
+            <div class="layui-form-item">
+                <button type="button" class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
+            </div>
+            <!-- 注册 -->
+            <div class="links">
+                <a href="javascript:void(0);" class="register">
+                    去注册账号
+                </a>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
