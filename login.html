@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>大事件-登录页</title>
-    <!-- 导入layUI的css文件 -->
+    <link rel="shortcut icon" href="./big-event-favicon.ico">
+    <!-- 引入layUI的css文件 -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
-    <!-- login页面自己的css -->
+    <!-- 引入login页面自己的css -->
     <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
@@ -27,19 +28,19 @@
         <form class="layui-form" action="">
             <!-- 用户名 -->
             <div class="layui-form-item">
-                <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1E9FFF;"></i>  
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
+                <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1e9fff;"></i>  
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
                     class="layui-input">
             </div>
             <!-- 密码 -->
             <div class="layui-form-item">
-                <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1E9FFF;"></i>  
+                <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1e9fff;"></i>  
                 <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                     autocomplete="off" class="layui-input">
             </div>
             <!-- 登录按钮 -->
             <div class="layui-form-item">
-                <button type="button" class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
+                <button type="submit" class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
             </div>
             <!-- 注册 -->
             <div class="links">
@@ -49,6 +50,12 @@
             </div>
         </form>
     </div>
+    <!-- 引入jQuery -->
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 引入layui -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 引入login页面自己的js -->
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>
