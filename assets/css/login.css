@@ -35,6 +35,9 @@ html,body {
     justify-content: flex-end; */
     text-align: right;
 }
+.links a:hover {
+    color: #1e9fff;
+}
 /* input框 */
 .layui-form-item {
     position: relative;

@@ -23,4 +23,10 @@ $(function(){
             }
         });
     });
+    //回车键触发表单提交事件
+    $('.layui-form').on('keydown',function(e){
+        if(e.keyCode == 13){
+            $(this).trigger('submit');
+        };
+    });
 });
