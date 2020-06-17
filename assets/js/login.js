@@ -4,13 +4,13 @@ $(function(){
     var form = layui.form;
     //基于layui自定义表单验证规则
     form.verify({
-        //用户名必须是6-10位字符
-        uname: [/^[\S]{6,10}$/,'用户名必须是6-10位字符'],
+        //用户名必须是5-10位字符
+        uname: [/^[\S]{5,10}$/,'用户名必须是5-10位字符'],
         //密码必须是6位数字
         pwd: function(value){
-            var reg = /^\d{6}$/;
+            var reg = /^\w{5,10}$/;
             if(!reg.test(value)){
-                return '密码必须是6位数字';
+                return '密码必须是5-10位字母';
             };
         }
     });
@@ -28,6 +28,8 @@ $(function(){
             success: function(backData){
                 //登录成功后跳转到主页
                 if(backData.status == 0){
+                    //把登录成功的标志存储在客户端
+                    localStorage.setItem('myToken',backData.token);
                     location.href = './index.html';
                 };
             }
