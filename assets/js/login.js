@@ -1,4 +1,4 @@
-//实现登录功能
+//实现登录注册功能
 $(function(){
     //获取表单对象
     var form = layui.form;
@@ -15,7 +15,7 @@ $(function(){
         }
     });
     //表单提交事件(点击登录button)
-    $('.layui-form').submit(function(e){
+    $('#loginForm').submit(function(e){
         //阻止默认事件
         e.preventDefault();
         //获取用户名和密码
@@ -35,19 +35,33 @@ $(function(){
             }
         });
     });
-    //回车键触发表单提交事件
-    $('.layui-form').on('keydown',function(e){
-        if(e.keyCode == 13){
-            $(this).trigger('submit');
-        };
-    });
-    //----------------------------------------------------------------------
-    //去注册按钮点击事件
+
+    //去注册
     $('.register').on('click',function(){
-        $('.layui-form').eq(0).hide().siblings('form').show();
+        $('#loginForm').hide().siblings('form').show();
     });
     //去登录
     $('.login').on('click',function(){
-        $('.layui-form').eq(1).hide().siblings('form').show();
+        $('#registerForm').hide().siblings('form').show();
+    });
+
+    //注册表单提交事件
+    $('#registerForm').submit(function(e){
+        //阻止默认事件
+        e.preventDefault();
+        //获取用户名和密码
+        var formData = $(this).serialize();
+        //发送ajax请求验证用户名和密码
+        $.ajax({
+            url: 'http://ajax.frontend.itheima.net/api/register',
+            type: 'post',
+            data: formData,
+            success: function(backData){
+                //登录成功后跳转到主页
+                if(backData.status == 0){
+                    
+                };
+            }
+        });
     });
 });
