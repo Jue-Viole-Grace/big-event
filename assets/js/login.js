@@ -12,6 +12,14 @@ $(function(){
             if(!reg.test(value)){
                 return '密码必须是5-10位字母';
             };
+        },
+        //自定义注册表单验证规则(两次密码一致)
+        same: function(value){
+            //获取原始密码
+            var pwd = $('#registerForm input[type=password]').eq(0).val();
+            if(pwd != value){
+                return '两次密码必须一致';
+            };
         }
     });
     //表单提交事件(点击登录button)
@@ -57,9 +65,13 @@ $(function(){
             type: 'post',
             data: formData,
             success: function(backData){
-                //登录成功后跳转到主页
+                //登录成功后跳转到登录页
                 if(backData.status == 0){
                     $('.login').click();
+                    layer.msg(backData.message);
+                }else{
+                    //layui的弹窗
+                    layer.msg(backData.message);
                 };
             }
         });
