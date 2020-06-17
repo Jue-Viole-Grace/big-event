@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>layout 后台大布局 - Layui</title>
+    <title>后台管理页面</title>
     <link rel="shortcut icon" href="./big-event-favicon.ico">
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="./assets/css/index.css">
@@ -25,9 +25,9 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;" class="welcome">
-                        <div>L</div>
+                        <div>F</div>
                         <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->
-                        用户名
+                        <span id="nav-username"></span>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
@@ -45,9 +45,9 @@
             <div class="layui-side-scroll">
                 <!-- 顶部欢迎语 -->
                 <a href="javascript:;" class="welcome">
-                    <div>L</div>
+                    <div>F</div>
                     <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->
-                    <span>欢迎 XXX </span>
+                    <span>欢迎 <span id="username"></span> </span>
                 </a>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink='all' lay-filter="test">
