@@ -15,4 +15,25 @@ $(function(){
         });
     };
     loadUserInfo();
+
+    //修改个人信息-表单提交事件
+    $('#form').submit(function(e){
+        e.preventDefault();
+        //fd是数组
+        var fd = $(this).serializeArray();
+        fd = fd.filter(function(item){
+            //原生js数组的filter方法，返回满足条件的元素
+            return item.name !== 'username';
+        });
+        $.ajax({
+            url: 'my/userinfo',
+            type: 'post',
+            data: fd,
+            success: function(res){
+                if(res.status === 0){
+                    layer.msg(res.message);
+                };
+            }
+        });
+    });
 });
