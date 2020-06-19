@@ -30,7 +30,7 @@ $(function(){
         var formData = $(this).serialize();
         //发送ajax请求验证用户名和密码
         $.ajax({
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: 'api/login',
             type: 'post',
             data: formData,
             success: function(backData){
@@ -61,7 +61,7 @@ $(function(){
         var formData = $(this).serialize();
         //发送ajax请求验证用户名和密码
         $.ajax({
-            url: 'http://ajax.frontend.itheima.net/api/reguser',
+            url: 'api/reguser',
             type: 'post',
             data: formData,
             success: function(backData){

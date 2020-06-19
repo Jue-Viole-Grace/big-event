@@ -8,7 +8,7 @@ $(function(){
     //获取用户信息
     function loadUserInfo (){
         $.ajax({
-            url: 'http://ajax.frontend.itheima.net/my/userinfo',
+            url: 'my/userinfo',
             type: 'get',
             //请求头
             headers: {
