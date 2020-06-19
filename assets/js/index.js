@@ -32,7 +32,7 @@ $(function(){
     //退出功能
     $('#logout-btn').on('click',function(){
         // 弹出层，询问是否要退出
-        layer.confirm('你确定退出吗？你退出了还得登录，你想好了吗？', function (index) {
+        layer.confirm('你确定要退出登录吗？', function (index) {
             // 如果点击了确定，删除token，页面跳转
             localStorage.removeItem('myToken');
             layer.close(index); // 关闭当前弹出层
