@@ -10,7 +10,6 @@ $(function(){
         $.ajax({
             url: 'my/userinfo',
             type: 'get',
-            //请求头
             success: function(backData){
                 if(backData.status == 0){
                     var info = backData.data;
