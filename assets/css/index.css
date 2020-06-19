@@ -29,4 +29,6 @@
     border: 0;
     /*display: block;*/
 }
-
+.layui-footer {
+    text-align: center;
+}
