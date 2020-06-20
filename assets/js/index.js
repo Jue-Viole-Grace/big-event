@@ -1,9 +1,9 @@
 $(function(){
     //判断myToken是否存在
-    var myToken = localStorage.getItem('myToken');
+    /*var myToken = localStorage.getItem('myToken');
     if(!myToken){
         location.href = './login.html';
-    };
+    };  */
 
     //获取用户信息
     function loadUserInfo (){
