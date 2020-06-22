@@ -1,7 +1,7 @@
 //通用的接口调用设置
 //ajaxPrefliter方法可以在ajax请求发出之前配置请求参数
 
-var baseURL = 'http://ajax.frontend.itheima.net/';
+var baseURL = 'http://www.liulongbin.top:3007/';
 $.ajaxPrefilter(function(option){
     //option是jQuery请求方法的配置信息
     option.beforeSend = function(){
